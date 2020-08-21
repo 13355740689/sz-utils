@@ -12,13 +12,20 @@
     "utils",
     "function"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Ljsxx/sz-utils.git"
+  },
   "author": "Ljsxx",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ljsxx/sz-utils/issues"
+  },
+  "homepage": "https://github.com/Ljsxx/sz-utils#readme",
   "devDependencies": {
     "eslint": "^7.7.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {}
+  }
 }
