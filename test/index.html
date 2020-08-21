@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sz-utils</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 10px 20px;
+      text-align: center;
+      background: #000;
+      color: green;
+      font-size: 18px;
+    }
+    #test-input {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      text-align: left;
+    }
+  </style>
+  <script type="text/javascript" src="../sz-utils.js"></script>
+</head>
+<body>
+  <h1>sz-utils</h1>
+  <div>
+    <textarea name="" id="test-input" cols="30" rows="30"></textarea>
+    <button id="test-submit">打印</button>
+  </div>
+</body>
+<script>
+  var testInput = document.getElementById('test-input');
+  testInput.value = `
+    /* 示例 */
+    console.log(szutils);
+    console.log(szutils.isNumber(123));
+    console.log(szutils.isNumber('123'));
+    console.log(szutils.commonUtil);
+    console.log(szutils.commonUtil.isNumber);
+    console.log(szutils.commonUtil.isNumber(123));
+    console.log(szutils.commonUtil.isNumber('123'));
+  `
+  var testSubmit = document.getElementById('test-submit');
+  testSubmit.onclick = function () {
+    var inputStr = testInput.value;
+    console.log(inputStr);
+    if (inputStr) {
+      try {
+        eval(inputStr)
+      } catch (e) {
+        throw new Error(e)
+      }
+    }
+  }
+</script>
+</html>
