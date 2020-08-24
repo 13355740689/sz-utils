@@ -1,6 +1,6 @@
 # sz-utils工具库
 
-> javascript工具库
+> 常用工具库
 
 - [ ] cookie操作：cookieUtil.js
 - [ ] storage操作  storageUtil.js
@@ -32,3 +32,21 @@
 - [ ] 微信公众号操作  weChatUtil.js
 
 - [ ] 浏览器操作 browserUtil.js
+
+## Installation
+```
+npm i sz-utils
+```
+
+## Usage
+```js
+import { calculate } from 'sz-utils'
+
+console.log(0.1 + 0.2)
+// => 0.30000000000000004
+console.log(calculate(0.1, '+', 0.2))
+// => 0.3
+```
+
+
+
